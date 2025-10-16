@@ -1,0 +1,62 @@
+/* Minimal base: keep Streamlit defaults, only small spacing/typography tweaks */
+/* Dark theme base */
+body, * { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+.main { background: #0b1020; }
+.block-container { max-width: 1100px; padding-top: 2.25rem; padding-bottom: 1.5rem; }
+
+/* Hide sidebar entirely */
+[data-testid="stSidebar"], [data-testid="stSidebarNav"], [data-testid="stSidebarCollapsedControl"] { display: none !important; }
+
+/* Headings & text */
+.section-header { font-size: 1.05rem; font-weight: 700; color: #e5e7eb; margin: 0.75rem 0 0.6rem; }
+.explanation { color: #e5e7eb; line-height: 1.65; }
+
+/* Inputs */
+.stTextArea textarea { border-radius: 8px !important; background: #0f172a !important; color: #e5e7eb !important; border: 1px solid #1f2937 !important; padding: 12px !important; transition: border-color .2s ease, box-shadow .2s ease !important; }
+.stTextArea textarea:focus { border-color: #60a5fa !important; box-shadow: 0 0 0 3px rgba(96,165,250,.18) !important; }
+.stTextArea textarea::placeholder { color: #94a3b8 !important; }
+.stButton>button { border-radius: 8px !important; background: #3b82f6 !important; color: #ffffff !important; border: none !important; padding: 10px 14px !important; transition: transform .15s ease, box-shadow .2s ease !important; }
+.stButton>button:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(59,130,246,.22) !important; }
+.stButton>button:active { transform: translateY(0); box-shadow: 0 6px 14px rgba(59,130,246,.2) !important; }
+
+/* Input panel wrapper removed per request */
+
+/* Cards */
+.card { background: #0f172a; border: 1px solid #1f2937; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.25); color: #e5e7eb; animation: fadeIn .25s ease-out; opacity: 1; backdrop-filter: none; }
+.card + .card { margin-top: .75rem; }
+.gap-lg { margin-top: 1rem; }
+.card--accent { border-left: 4px solid #60a5fa; opacity: 1; }
+
+/* Ensure right column content stays within its column and full opacity */
+.right-panel * { opacity: 1 !important; }
+.card--success { border-left: 4px solid #22c55e; }
+.card--warning { border-left: 4px solid #f59e0b; }
+
+/* Tabs */
+[data-baseweb="tab-list"] { border-bottom: 1px solid #1f2937; }
+[data-baseweb="tab"] { color: #cbd5e1; }
+[data-baseweb="tab"]:hover { color: #ffffff; }
+
+/* Metrics grid spacing */
+.metrics-row { margin-top: .5rem; }
+
+/* Spinner */
+.spinner {
+  margin: 12px auto 4px;
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Skeleton loaders */
+.skeleton { position: relative; overflow: hidden; background: #111827; border-radius: 8px; }
+.skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent); animation: shimmer 1.2s infinite; }
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+/* Subtle fade/slide */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
