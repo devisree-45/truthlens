@@ -1,0 +1,49 @@
+# =========================
+# Python & Streamlit Project
+# =========================
+
+# Virtual environment folders
+venv/
+venv_new/
+.env/
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Jupyter notebook checkpoints (if you ever add notebooks)
+.ipynb_checkpoints/
+
+# VSCode or IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and credentials
+.env
+*.env
+
+# Model or dataset files (optional – uncomment if you don’t want them in Git)
+# models/
+# data/
+
+# Streamlit specific cache
+.streamlit/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Others
+*.sqlite3
